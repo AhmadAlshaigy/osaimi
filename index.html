@@ -129,7 +129,7 @@ dialog .err{color:#c0392b;font-size:14px;min-height:1.4em;margin:6px 0 0}
   <div>
    <small>تراث الشيخ صالح بن عبد الله العصيمي</small>
    <h1>مجالس العلم، فنًّا فنًّا</h1>
-   <p>كل قوائم دروس الشيخ من قناته على يوتيوب، مرتبة على الفنون، مع ما جدّ بعد كشّاف البرامج (١٤٣٨هـ)، وصوتيات موقعه «جامع الإيمان». يُحفظ موضع توقفك في كل درس، وتتقدّم كل سلسلة مع كل دقيقة تسمعها.</p>
+   <p>كل قوائم دروس الشيخ من قناته على يوتيوب، مرتبة على الفنون، وصوتيات موقعه «جامع الإيمان». يُحفظ موضع توقفك في كل درس، وتتقدّم كل سلسلة مع كل دقيقة تسمعها.</p>
    <div class="stats">
     <div class="stat"><b id="sS">٠</b><span>سلسلة</span></div>
     <div class="stat"><b id="sL">٠</b><span>درس ومجلس</span></div>
@@ -154,7 +154,7 @@ dialog .err{color:#c0392b;font-size:14px;min-height:1.4em;margin:6px 0 0}
  <div id="list"></div>
  <section class="jeman" id="jeman">
   <h2>صوتيات وإصدارات موقع «جامع الإيمان»</h2>
-  <p class="sub">موقع الشيخ الرسمي. فيه صوتيات البرامج كلها، ومنها ما جدّ بعد الكشّاف كمستويات أصول العلم الثالث والرابع، إلى جانب الإصدارات العلمية.</p>
+  <p class="sub">موقع الشيخ الرسمي. فيه صوتيات البرامج كلها، ومنها مستويات أصول العلم الثالث والرابع، إلى جانب الإصدارات العلمية.</p>
   <div>
    <a href="https://j-eman.net/sounds/lessons/0/1" target="_blank" rel="noopener">الدروس الصوتية (حسب البرامج)</a>
    <a href="https://j-eman.net/sounds/sciencelectures/0/1" target="_blank" rel="noopener">المحاضرات العلمية</a>
@@ -261,14 +261,14 @@ function renderResume(){
 
 function renderChips(){
  const cnt=k=>all().filter(s=>s.f===k).length;
- $('#chips').innerHTML=[{k:'all',n:'الكل'},{k:'new',n:'✦ ما جدّ بعد كشّاف ١٤٣٨هـ'},...FANS].map(f=>`<button class="chip" data-f="${f.k}" aria-pressed="${fan===f.k}">${esc(f.n)}<i>${ar(f.k==='all'?all().length:f.k==='new'?all().filter(s=>s.nw).length:cnt(f.k))}</i></button>`).join('');
+ $('#chips').innerHTML=[{k:'all',n:'الكل'},...FANS].map(f=>`<button class="chip" data-f="${f.k}" aria-pressed="${fan===f.k}">${esc(f.n)}<i>${ar(f.k==='all'?all().length:f.k==='new'?all().filter(s=>s.nw).length:cnt(f.k))}</i></button>`).join('');
 }
 
 function card(s){
  const p=seriesProg(s.id),F=FANS.find(f=>f.k===s.f);
  const w=p?Math.round(p.pct*100):0;
  const info=p?`${ar(p.done)} من ${ar(p.n)} درسًا`:'افتحها لتحميل دروسها';
- return `<article class="card"><span class="tag">${esc(F?F.n:'')}${s.nw?' <b class="nw">جديد بعد الكشّاف</b>':''}</span><h3>${esc(s.t)}</h3><span class="by">${s.mine?'أضفتها أنت':'قناة الشيخ'}${s.n?' · '+ar(s.n)+' مقطعًا':''}</span>
+ return `<article class="card"><span class="tag">${esc(F?F.n:'')}</span><h3>${esc(s.t)}</h3><span class="by">${s.mine?'أضفتها أنت':'قناة الشيخ'}${s.n?' · '+ar(s.n)+' مقطعًا':''}</span>
  <div class="meter" aria-label="التقدم ${w}%"><i style="width:${w}%"></i></div>
  <div class="row"><span>${info}${p&&w?' · ٪'+ar(w):''}</span><button data-open="${esc(s.id)}">${p&&p.pct>0?'تابع':'ابدأ'}</button></div>
  ${s.mine?`<button class="x" data-del="${esc(s.id)}">حذف هذه السلسلة</button>`:''}</article>`;

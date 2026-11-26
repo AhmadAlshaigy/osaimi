@@ -93,7 +93,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
 .lessons .m{height:4px;background:var(--line);border-radius:4px;margin-top:6px;overflow:hidden}
 .lessons .m i{display:block;height:100%;background:var(--gold)}
 .lessons .d{color:var(--ok);font-size:13px;font-weight:600}
-.note{color:var(--mute);font-size:14px;padding:10px 0}
+.note{color:var(--mute);font-size:14px;padding:10px 0}.tf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;font-size:14px}.tf span{color:var(--mute)}.tf a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:20px;border:1px solid var(--gold);text-decoration:none;color:var(--ink);background:var(--card)}
 dialog{border:1px solid var(--line);border-radius:22px;background:var(--card);color:var(--ink);width:min(460px,92vw);padding:22px}
 dialog::backdrop{background:#0009}
 dialog h3{font:700 24px Amiri,serif;margin:0 0 10px}
@@ -178,6 +178,8 @@ dialog .err{color:#c0392b;font-size:14px;min-height:1.4em;margin:6px 0 0}
   <a href="https://www.youtube.com/@alosyme" target="_blank" rel="noopener">قناة الدروس</a>
     <a href="https://sites.google.com/view/al-osaimi/" target="_blank" rel="noopener">مكتبة الشيخ</a>
   <a href="https://j-eman.net/" target="_blank" rel="noopener">موقع جامع الإيمان (j-eman.net)</a>
+  <a href="https://t.me/mkalosyme" target="_blank" rel="noopener">التفريغات المعتمدة</a>
+  <a href="https://t.me/wwwattafreegh" target="_blank" rel="noopener">تفريغات سالم</a>
   <button class="x btn" id="exp" style="height:40px">حفظ نسخة من تقدّمي</button>
   <label class="btn" style="height:40px;display:inline-flex;align-items:center">استرجاع نسخة<input id="imp" type="file" accept="application/json" hidden></label>
  </div>
@@ -186,7 +188,7 @@ dialog .err{color:#c0392b;font-size:14px;min-height:1.4em;margin:6px 0 0}
 <section id="view" aria-modal="true" role="dialog">
  <div class="vh"><button class="ib" id="close" aria-label="رجوع"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button><h3 id="vt"></h3><a class="lib" id="vy" target="_blank" rel="noopener">يوتيوب</a></div>
  <div class="vbody">
-  <div class="pbox"><div class="ratio"><div id="player"></div></div><div class="now" id="now"></div></div>
+  <div class="pbox"><div class="ratio"><div id="player"></div></div><div class="now" id="now"></div><div class="tf"><span>تفريغ الدروس:</span><a href="https://t.me/mkalosyme" target="_blank" rel="noopener">الخزانة العصيمية (التفريغات المعتمدة)</a><a href="https://t.me/wwwattafreegh" target="_blank" rel="noopener">قناة سالم للتفريغ</a></div></div>
   <div><ul class="lessons" id="lessons"></ul></div>
  </div>
 </section>
